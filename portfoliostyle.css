@@ -1,0 +1,403 @@
+/* Dark Mode Styles */
+
+/* Base dark mode background and text */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+/* Form elements in dark mode */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Border color adjustments for contact section */
+body.dark-mode .contact-section {
+  border-color: #444;
+}
+
+/* Floating dark mode toggle button */
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 999;
+}
+
+.dark-toggle:hover {
+  background-color: #555;
+}
+
+/* Reusable text color adjustments for dark mode */
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode span,
+body.dark-mode div {
+  color: #ccc; /* Medium gray for visibility */
+}
+
+body.dark-mode .cert-block {
+  background-color: #1a1a1a; /* Dark gray block background */
+  color: #ccc; /* Ensure text inside is visible */
+}
+
+/* Section block styling in dark mode */
+body.dark-mode .project-block,
+body.dark-mode .skill-block,
+body.dark-mode .certification-block {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+.dark-mode #about p {
+  color: #ccc;
+}
+
+/* Submit section with theme variables */
+.submit {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit a {
+  color: var(--accent-color);
+}
+
+.submit input,
+.submit textarea {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.submit input::placeholder,
+.submit textarea::placeholder {
+  color: #999;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cert-block {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-block,
+.skill-block,
+.certification-block {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s;
+}
+
+/* Global link style */
+a {
+  color: #3399ff; 
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Navbar Styles */
+header {
+  background-color: #003366;
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #00ccff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsivity */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background-color: #003366;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Theme Toggle */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+  gap: 0.5rem;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+}
+
+.theme-switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Content Container */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* About Section */
+#about {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.dark-mode #about h2 {
+  color: #00ccff;
+}
+
+#about p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reveal on scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+.dark-mode footer {
+  background-color: #1c1c1c;
+}
+
+/* Certification layout spacing and indent */
+#certifications {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cert-block {
+  background-color: #f9fcff;
+  border-left: 5px solid #336699;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cert-block h3 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.cert-block p.indent {
+  text-indent: 2rem;
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+.cert-block ul {
+  margin-top: 1rem;
+  padding-left: 2rem;
+  line-height: 1.6;
+}
+
+.resume-section {
+  text-align: center;
+  background-color: #e0f4ff;
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #0074d9;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode span,
+body.dark-mode div {
+  color: #ccc; /* Medium gray for visibility */
+}
+
+body.dark-mode .cert-block {
+  background-color: #1a1a1a; /* Dark gray block background */
+  color: #ccc; /* Ensure text inside is visible */
+}
+
+body.dark-mode .project-block,
+body.dark-mode .skill-block,
+body.dark-mode .certification-block {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+.dark-mode #about p {
+  color: #ccc;
+}
+
+/* MAP STYLING */
+.map-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#map h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}

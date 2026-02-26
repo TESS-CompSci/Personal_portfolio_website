@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- Meta Configuration -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Tess Njuguna</title>
+
+   <!-- === External Stylesheets === -->
+  <link rel="stylesheet" href="css/portfoliocontact.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar with hamburger -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="portfolioindex.html" class="logo">Home</a>
+
+      <!-- Navigation Links to other pages -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="portfolioindex.html"><i class="fa-solid fa-user"></i>About</a></li>
+        <li><a href="portfolioskills.html"><i class="fa-solid fa-code"></i>Skills</a></li>
+        <li><a href="portfolioprojects.html"><i class="fa-solid fa-laptop-code"></i>Projects</a></li>
+        <li><a href="portfoliocertifications.html"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+        <li><a href="portfoliocontact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
+      </ul>
+
+    <!-- Hamburger Menu Icon for Mobile -->
+    <button class="hamburger" id="hamburger">&#9776;</button>
+      </nav>
+
+  <!-- Main Contact Form Section -->
+  <main class="container">
+    <section class="contact-section">
+      <h2>Contact Me</h2>
+      <p>If you’d like to collaborate or have a question, use the form below.</p>
+
+      <form id="contactForm" action="portfoliothankyou.html" method="post">
+        <!-- Name fields -->
+        <label for="first-name">First Name *</label>
+        <input type="text" id="first-name" name="firstName" placeholder="e.g., Jeremiah" required>
+
+        <label for="last-name">Last Name *</label>
+        <input type="text" id="last-name" name="lastName" placeholder="e.g., Brooke" required>
+
+        <!-- Email -->
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="jbrooklyn95@email.com" required>
+
+        <!-- Message -->
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Type your message here..." rows="5" maxlength="500" required></textarea>
+        <p id="charCount" style="font-size: 0.9rem; color: #555;">0 / 500 characters</p>
+
+        <!-- Submit -->
+        <button type="submit">Send</button>
+        <p id="formMessage" style="margin-top: 0.5rem;"></p>
+      </form>
+
+      <!-- Social links with JavaScript's void functionality to make them unclickable links -->
+      <div class="socials">
+        <p>Or reach me directly:</p>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> <a href="javascript:void(0);">tess123@gmail.com</a></li>
+          <li><i class="fa-brands fa-linkedin"></i> <a href="#" target="_blank">linkedin.com/in/tess</a></li>
+          <li><i class="fa-brands fa-github"></i> <a href="#" target="_blank">github.com/tess</a></li>
+          <li><i class="fa-brands fa-whatsapp"></i> <a href="javascript:void(0);" target="_blank">+60 12-345 6789</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 T.N. All rights reserved.</p>
+  </footer>
+
+<!-- JavaScript -->
+  <script src="js/portfoliocontact.js"></script>
+
+</body>
+</html>
